@@ -1,0 +1,204 @@
+@media (max-width: 1000px) {
+    /* header */
+    .topbar {
+        height: max-content;
+    }
+    .leftbar {
+        font-size: 2rem;
+    }
+    .navbar li {
+        padding: 20px 10px;
+    }
+
+    /* top wrapper */
+    .top-wrapper {
+        height: 400px;
+    }
+    .quotes {
+        margin-top: 20px;
+        left: 350px;
+    }
+
+    /* breed lis wrapper */
+    .pict img {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* footer */
+    footer {
+        height: max-content;
+    }
+    .footer-lists {
+        padding: 20px 5px;   
+    }
+    .part {
+        width: 500px;
+    }
+    footer .fa {
+        margin: 0 5px;
+    }
+
+    /* general */
+    .heading h2 {
+        font-size: 4rem;
+    }
+    .heading h3 {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 670px) {
+    /* header */
+    .topbar {
+        display: block;
+        height: 50px;
+        padding: 5px;
+    }
+    .res-menu {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .leftbar {
+        font-size: 0.8rem;
+    }
+    .menubar {
+        display: block;
+        padding: 10px;
+        border: 3px darksalmon;
+        transition: ease-out;
+        cursor: pointer;
+    }
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 80%;
+        width: 100%;
+        background-color: honeydew;
+        overflow-x: hidden;
+        transition: 0.5s;
+        z-index: 2;
+    }
+    .overlay .navbar {
+        display: block;
+        position: relative;
+        padding: 5px;
+        width: 100%;
+        top: 50px;
+    }
+    .overlay li {
+        display: block;
+        padding: 10px;
+        width: 100%;
+        font-size: 1.5em;
+    }
+    .overlay .closebtn {
+        position: absolute;
+        top: 5px;
+        right: 45px;
+        font-size: 5em;
+    }
+    .fa-bars {
+        transform: scale(2);
+        color: #8b0000;
+    }
+    .menubar:hover {
+        background-color: darksalmon;
+        transform: scale(1.2);
+    }
+
+    /* top-wrapper */
+    .top-wrapper {
+        background-position: center;
+        margin-top: 55px;
+        height: 350px;
+        width: 100%;
+    }
+    .top-wrapper .heading {
+        padding: 60px 20px;
+    }
+    .heading h2 {
+        font-size: 5em;
+    }
+    .heading h3 {
+        font-size: 2em;
+    }
+    .quotes {
+        left: 20px;
+        font-size: 1;
+    }
+    
+    /* about wrapper */
+    .about-wrapper {
+        flex-direction: column;
+        height: max-content;
+        padding: 10px;
+    }
+    .about-wrapper .heading {
+        padding: 20px 10px;
+        width: 90%;
+        margin-bottom: 30px;
+    }
+    .about-wrapper h2 {
+        text-align: center;
+    }
+
+    /* Cats breeds wrapper */
+    .cat-breeds-wrapper {
+        width: 100%;
+    }
+    .cat-breeds-wrapper .heading {
+        padding: 50px;
+    }
+
+    /* Cat breeds wrapper */
+    .breed-list-wrapper {
+        width: 100%;
+    }
+    .breed-list-wrapper .heading {
+        padding: 20px;
+    }
+    .breed-list-wrapper .heading h4{
+        font-size: 1.5em;
+    }
+    .tab button {
+        padding: 10px;
+    }
+    .tab abbr {
+        font-size: 1.5em;
+    }
+    .item {
+        margin: 2.5px;
+    }
+    .pict img {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* searchbar wrapper */
+    .searchbar-wrapper {
+        height: max-content;
+    }
+
+    /* footer */
+    footer {
+        height: max-content;
+    }
+    .footer-lists {
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px 10px 10px 10px;
+    }
+    footer .fa {
+        margin: 0 5px 20px 5px;
+    }
+    .part {
+        margin: 0 auto;
+        width: 300px;
+    }
+    .copy {
+        font-size: 1.5em;
+    }
+}

@@ -1,0 +1,38 @@
+.top-wrapper {
+    background-image: url("https://assets.kogan.com/images/dollarswarehouse/DWS-UN68274/3-3b21e53648-s-l1600.jpg?auto=webp&canvas=753%2C502&fit=bounds&height=502&quality=75&width=753");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 530px;
+    margin-top: 105px;
+}
+
+.top {
+    padding-top: 60px;
+    margin: 0 10px;
+    height: inherit;
+    background-color: rgb(165, 210, 228, 0.4);
+}
+
+.top-wrapper .heading {
+    position: relative;
+    top: -70px;
+    padding: 60px;
+    color: darkred;
+}
+
+.heading h2 {
+    font-size: 6rem;
+    line-height: 1;
+}
+
+.heading h3 {
+    margin: 30px 0 20px 0;
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+.heading h5 {
+    font-size: 1.2em;;
+    color: black
+}

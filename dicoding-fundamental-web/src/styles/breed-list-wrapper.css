@@ -1,0 +1,102 @@
+.breed-list-wrapper {
+    width: 100%;
+    padding: 10px 30px;
+}
+
+.breed-list-wrapper .heading {
+    padding: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.breed-list-wrapper h2 {
+    margin-bottom: 10px;
+}
+
+.breed-list-wrapper h4 {
+    text-align: center;
+    font-size: 2em;
+}
+
+.breed-list-wrapper abbr {
+    text-decoration: none;
+}
+
+.source {
+    text-align: right;
+}
+
+.tab {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    background-color: darksalmon;
+}
+
+.tab button {
+    padding: 10px 30px;
+    border: 2px lightblue;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.tab button:hover,
+.tab button.active {
+    background-color: lightblue;
+}
+
+.tab abbr {
+    font-size: 2.5em;
+    font-weight: 700;
+    text-decoration: none;
+    color: rgb(121, 56, 56);
+}
+
+.tablist {
+    display: none;
+    padding: 30px;
+    margin: 15px;
+    box-shadow: 0 0 10px beige;
+}
+
+.item {
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.pict img {
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 0 5px grey;
+    border-radius: 50%;
+    opacity: 1;
+    backface-visibility: hidden;
+    transition: 0.5 ease;
+}
+
+.item:hover .pict img {
+    border-radius: 0;
+    opacity: 0.3;
+}
+
+.item:hover .text {
+    opacity: 0.8;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    padding: 12px 12px;
+    text-align: center;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: 0.5 ease;
+}
+
+.text a {
+    font-size: 2em;
+    font-weight: 600;
+}

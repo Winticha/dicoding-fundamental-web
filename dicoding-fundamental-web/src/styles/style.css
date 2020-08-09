@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100&family=Varta:wght@300&family=Pacifico&display=swap");
+@import "header.css";
+@import "top-wrapper.css";
+@import "about-wrapper.css";
+@import "cat-breeds-wrapper.css";
+@import "breed-list-wrapper.css";
+@import "searchbar-wrapper.css";
+@import "footer.css";
+@import "responsive.css";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+}
+
+body {
+    font-size: 62.5%;
+    font-family: 'Varta', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+.active {
+    background-color: darksalmon;
+}

@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Go Cats!</title>
+        <meta name="viewport" content="width=media-width, initial-scale=1">
+        <link type="text/css" rel="stylesheet" href="/src/styles/style.css">
+    </head>
+
+    <body>
+        <header>
+            <div class="topbar" id="myTopbar">
+                <div class="res-menu">
+                    <div class="leftbar con">
+                        <h1><a href="">Go Cats!</a></h1>
+                        <i class="fa fa-paw" aria-hidden="true"></i>
+                    </div>
+                    <div class="menubar con" id="myMenubar">
+                        <a href="javascript:void(0);" onclick="openNav()" class="icon"><i class="fa fa-bars"></i></a>
+                    </div>
+                </div>
+                <div class="overlay con" id="overlayBar">
+                    <a href="javascript:void(0);" class="closebtn" onclick="closeNav()">&times;</a>
+                    <nav class="navbar" id="navBar">
+                        <ul>
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#">Cats</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Support Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section>
+                <div class="top-wrapper">
+                    <div class="container top">
+                        <div class="heading">
+                            <h2>Welcome to<br>Go Cats!</h2>
+                            <h3>Where you can find<br>some great tips to raise your cats</h3>
+                            <h5>Do you know cats love to sit in front of a window for hours?</h5>
+                            <h5>What do they see? Or What do they think?</h5>
+                            <h5>Meow...Meow...</h5>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="about-wrapper" id="about">
+                    <div class="heading">
+                        <h2>About Us</h2>
+                        <p>We are a social community focused on cat's live and introducing various cat's breeds internationally proofed by some international cat association.</p>
+                        <p>If you're new to cat's world, I can suggest you to pick the best cat's breeds that suits you well or try to rescue cat on street.</p>
+                        <p>We will help you to care your rescued cat</p>
+                        <button class="btn abt">Click here!</button>
+                    </div>
+                    <div class="side-pict">
+                        <img src="data:image/jpeg;base64,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" alt="Foster Cat">
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="cat-breeds-wrapper">
+                    <div class="heading">
+                        <h3>"A cat will be your friend, but never your slave."</h3>
+                        <p class="author">Theophile Gautier</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="breed-list-wrapper">
+                    <div class="heading">
+                        <h2>Cat's Breeds</h2>
+                        <h4>
+                            <blockquote>
+                                As of 2019, <abbr title="The International Cat Association">TICA</abbr> recognizes 71
+                                standardized cats breeds, the <abbr title="Cat Fanciers' Association">CFA</abbr> 44, and the
+                                <abbr title="Fédération Internationale Féline">FIFe</abbr> 43.
+                            </blockquote>
+                        </h4>
+                        <p class="source"><em>Wikipedia</em></p>
+                    </div>
+                    <div class="breeds">
+                        <div class="tab">
+                            <button id="defaultOpen" class="tablinks" onclick="openTab(event, 'gccf')"><abbr title="Governing Council of The Cat Fancy">GCCF</abbr></button>
+                            <button class="tablinks" onclick="openTab(event, 'fife')"><abbr title="Fédération Internationale Féline">FIFe</abbr></button>
+                            <button class="tablinks" onclick="openTab(event, 'caf')"><abbr title="Cat Fanciers Association">CAF</abbr></button>
+                            <button class="tablinks" onclick="openTab(event, 'tica')"><abbr title="The International Cat Association">TICA</abbr></button>
+                        </div>
+                        <div class="tabcontent">
+                            <div id="gccf" class="tablist">
+                                <div class="item">
+                                    <div class="pict">
+                                        <img src="https://www.gccfcats.org/portals/0/Abyssinian_294_400.jpg" alt="Abyssinian">
+                                    </div>
+                                    <div class="text">
+                                        <p><a href="#">Abyssinian</a></p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pict">
+                                        <img src="https://www.gccfcats.org/portals/0/Asian2_290_400.jpg" alt="Asian">
+                                    </div>
+                                    <div class="text">
+                                        <p><a href="#">Asian</a></p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pict">
+                                        <img src="https://www.gccfcats.org/portals/0/Australian%20Mist_290_400.jpg" alt="Australian Mist">
+                                    </div>
+                                    <div class="text">
+                                        <p><a href="#">Australian Mist</a></p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pict">
+                                        <img src="https://www.gccfcats.org/portals/0/Aztec_290_400..png?ver=2017-08-16-213840-763" alt="Aztec">
+                                    </div>
+                                    <div class="text">
+                                        <p><a href="#">Aztec</a></p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pict">
+                                        <img src="https://www.gccfcats.org/portals/0/Balinese2_290_400_thumb.jpg?ver=2017-08-17-213629-713" alt="Balinese">
+                                    </div>
+                                    <div class="text">
+                                        <p><a href="#">Balinese</a></p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pict">
+                                        <img src="https://www.gccfcats.org/portals/0/Bengal2_290_400.jpg?ver=2016-07-22-165857-450" alt="Bengal">
+                                    </div>
+                                    <div class="text">
+                                        <p><a href="#">Bengal</a></p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pict">
+                                        <img src="https://www.gccfcats.org/portals/0/Birman2_290_400.jpg?ver=2016-07-22-165857-827" alt="Birman">
+                                    </div>
+                                    <div class="text">
+                                        <p><a href="#">Birman</a></p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pict">
+                                        <img src="https://www.gccfcats.org/portals/0/British%20SH_290_400.jpg?ver=2016-07-22-165859-607" alt="British">
+                                    </div>
+                                    <div class="text">
+                                        <p><a href="#">British</a></p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pict">
+                                        <img src="https://www.gccfcats.org/portals/0/Burmese_290_400.jpg?ver=2016-07-22-165900-750" alt="Burmese">
+                                    </div>
+                                    <div class="text">
+                                        <p><a href="#">Burmese</a></p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pict">
+                                        <img src="https://www.gccfcats.org/portals/0/Chartreux_292_400_thumb.jpg?ver=2016-07-22-165902-897" alt="Chartreux">
+                                    </div>
+                                    <div class="text">
+                                        <p><a href="#">Chartreux</a></p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pict">
+                                        <img src="https://www.gccfcats.org/portals/0/Cornish%20Rex2_290_400.jpg?ver=2016-07-22-165904-280" alt="Cornish Rex">
+                                    </div>
+                                    <div class="text">
+                                        <p><a href="#">Cornish Rex</a></p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pict">
+                                        <img src="https://www.gccfcats.org/portals/0/Devon%20Rex_290_400.jpg?ver=2016-07-22-165906-533" alt="Devon Rex">
+                                    </div>
+                                    <div class="text">
+                                        <p><a href="#">Devon Rex</a></p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pict">
+                                        <img src="https://www.gccfcats.org/portals/0/Egyptian%20Mau_290_400.jpg?ver=2016-07-22-165907-930" alt="Egyptian Mau">
+                                    </div>
+                                    <div class="text">
+                                        <p><a href="#">Egyptian Mau</a></p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pict">
+                                        <img src="https://www.gccfcats.org/portals/0/Exotic%20SH_290_400.jpg?ver=2016-07-22-165908-267" alt="Exotic Shorthair">
+                                    </div>
+                                    <div class="text">
+                                        <p><a href="#">Exotic Shorthair</a></p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pict">
+                                        <img src="https://www.gccfcats.org/portals/0/Korat_290_400.jpg?ver=2016-07-22-165915-047" alt="Korat">
+                                    </div>
+                                    <div class="text">
+                                        <p><a href="#">Korat</a></p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pict">
+                                        <img src="https://www.rnz.co.nz/assets/news_crops/60229/eight_col_42643306_l.jpg?1530228981" alt="Two Cats">
+                                    </div>
+                                    <div class="text">
+                                        <p><a href="#">See More...</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="fife" class="tablist">
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://www.petfirst.com/wp-content/uploads/2019/03/shutterstock_1061274209.jpg" alt="Exotic">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Exotic<br>EXO</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://previews.123rf.com/images/borjalaria/borjalaria1310/borjalaria131000016/22816064-grey-persian-cat.jpg" alt="Persian">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Persian<br>PER</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://4.bp.blogspot.com/-zPnFX2A2bso/TYBF6szHEYI/AAAAAAAAGLo/7J-fwXrScRI/s1600/ragdolls.jpg" alt="Ragdoll">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Ragdoll<br>RAG</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://cdn1-www.cattime.com/assets/uploads/2011/12/file_2708_birman-460x290-460x290.jpg" alt="Sacred Birman">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Sacred Birman<br>SBI</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://icatcare.org/app/uploads/2018/10/turkish-van-1-1200x600.jpg" alt="Turkish Van">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Turkish Van<br>TUV</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://cdn3-www.cattime.com/assets/uploads/2011/12/file_2714_american-curl-460x290.jpg" alt="American Curl Longhair">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">American Curl Longhair<br>ACL</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS2-GsNVvQwK5ZsZHdpornCsCMwBpvx-hzW_w&usqp=CAU" alt="American Curl Shorthair">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">American Curl Shorthair<br>ACS</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://catpedia.net/wp-content/uploads/2017/11/LaPerm-longhair-cat.jpg" alt="LaPerm Longhair">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">LaPerm Longhair<br>LPL</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://vetstreet.brightspotcdn.com/dims4/default/fa16db7/2147483647/thumbnail/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2F42%2Ff5%2F82fea15f420cba40b71a64e9cfd6%2FLaPerm-AP-0MBNFB-645sm3614.jpg" alt="LaPerm Shorthair">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">LaPerm Shorthair<br>LPS</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://thepetshop4u.files.wordpress.com/2016/08/1-mainecoon-cats-photography-robertsijka.jpg" alt="Maine Coon">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Maine Coon<br>MCO</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://www.zooplus.co.uk/magazine/wp-content/uploads/2018/03/neva-masquerade-768x621.jpg" alt="Neva Masquerade">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Neva Masquerade<br>NEM</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://d2y2a7c2.rocketcdn.me/wp-content/uploads/norwegian-forest-cat-header-1200.jpg" alt="Norwegian Forest Cat">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Norwegian Forest Cat<br>NFO</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://gerava.com/wp-content/uploads/2019/07/Kucing-Siberia.jpg" alt="Siberian">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Siberian<br>SIB</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://verycrazypets.weebly.com/uploads/4/4/3/6/44360299/3853615_orig.jpg" alt="Turkish Angora">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Turkish Angora<br>TUA</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://brit-petfood.com/file/nodes/product/065%20(2).jpg" alt="Thai">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Thai<br>THA</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://www.kucingklik.com/wp-content/uploads/2019/08/Kucing-Sphynx-.jpg" alt="Sphynx">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Sphynx<br>SPH</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://cdn1-www.cattime.com/assets/uploads/2011/12/file_2686_somali-cat-breed.jpg" alt="Somali">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Somali<br>SOM</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://i.pinimg.com/originals/a9/d3/da/a9d3dac3a2f30d5c3e97db442a7c22b1.jpg" alt="Siamese">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Siamese<br>SIA</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://azure.wgp-cdn.co.uk/app-yourcat/posts/russian_blue1.jpg?&width=1200&height=630&mode=crop" alt="Russian Blue">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Russian Blue<br>RUS</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://www.rnz.co.nz/assets/news_crops/60229/eight_col_42643306_l.jpg?1530228981" alt="Two Cats">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">See More...</a></p>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div id="caf" class="tablist">
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://cfa.org/wp-content/uploads/2019/11/abtProfile.jpg" alt="American Bobtail">
+                                        </div>p
+                                        <div class="text">
+                                            <p><a href="#">Anerican Bobtail</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://cfa.org/wp-content/uploads/2019/11/ashProfile.jpg" alt="American Shorthair">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">American Shorthair</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://cfa.org/wp-content/uploads/2019/11/awhProfile.jpg" alt="American Wirehair">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">American Wirehair</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">]
+                                        <div class="pict">
+                                            <img src="https://cfa.org/wp-content/uploads/2019/11/bomProfile.jpg" alt="Bombay">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Bombay</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://cfa.org/wp-content/uploads/2019/11/bmlProfile.jpg" alt="Burmilla">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Burmilla</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://cfa.org/wp-content/uploads/2019/11/cpshProfile.jpg" alt="Colorpoint Shorthair">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Colorpoint Shorthair</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://cfa.org/wp-content/uploads/2019/11/ebProfile.jpg" alt="European Burmese">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">European Burmese</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://cfa.org/wp-content/uploads/2019/11/hbProfile.jpg" alt="Havana Brown">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Havana Brown</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://cfa.org/wp-content/uploads/2019/11/jbtProfile.jpg" alt="Japanese Bobtail">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Japanese Bobtail</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://cfa.org/wp-content/uploads/2019/11/kmProfile.jpg" alt="Khao Manee">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Khao Manee</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://cfa.org/wp-content/uploads/2019/11/lyProfile.jpg" alt="Lykoi">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Lykoi</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://cfa.org/wp-content/uploads/2019/11/mxProfile.jpg" alt="Manx">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Manx</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://cfa.org/wp-content/uploads/2019/11/ociProfile.jpg" alt="Ocicat">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Ocicat</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://cfa.org/wp-content/uploads/2019/11/oriProfile.jpg" alt="Orietal">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Oriental</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://cfa.org/wp-content/uploads/2019/11/rmProfile.jpg" alt="Ragamuffin">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Ragamuffin</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://cfa.org/wp-content/uploads/2019/11/sfProfile.jpg" alt="Scottish Fold">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Scottish Fold</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://cfa.org/wp-content/uploads/2019/11/srexProfile.jpg" alt="Selkirk Rex">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Selkirk Rex</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://cfa.org/wp-content/uploads/2019/11/tonkProfile.jpg" alt="Tonkinese">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Tonkinese</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://cfa.org/wp-content/uploads/2019/11/tbProfile.jpg" alt="Toybob">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Toybob</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://www.rnz.co.nz/assets/news_crops/60229/eight_col_42643306_l.jpg?1530228981" alt="Two Cats">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">See More...</a></p>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div id="tica" class="tablist">
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://tica.org/images/Breeds/American_Bobtail/American-Bobtail-Full-Body_.jpg" alt="American Bobtail">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">American Bobtail</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://tica.org/images/Breeds/American_Bobtail_Shorthair/American-Bobtail-Shorthair-Full-Body.jpg" alt="American Bobtail Shorthair">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">American Bobtail Shorthair</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://tica.org/images/Breeds/Australian_Mist/Australian-Mist-Full-Body.jpg" alt="Australian Mist">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Australian Mist</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://tica.org/images/Breeds/Bengal/Bengal-Full-Body.jpg" alt="Bengal">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Bengal</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://tica.org/images/Breeds/Bengal_Longhair/Bengal-Longhair-Full-Body.jpg" alt="Bengal Longhair">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Bengal Longhair</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://tica.org/images/Breeds/Bombay/Bombay-Full-Body.jpg" alt="Bombay">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Bombay</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://tica.org/images/Breeds/British_Longhair/British-Longhair-Full-Body.jpg" alt="British Longhair">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">British Longhair</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://tica.org/images/Breeds/British_Shorthair/British-Shorthair-Full-Body.jpg" alt="British Shorthair">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">British Shorthair</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://tica.org/images/Breeds/Burmilla/Burmilla-Full-Body.jpg" alt="Burmilla">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Burmilla</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://tica.org/images/Breeds/Burmilla_Longhair/Burmilla-Longhair-Full-Body.jpg" alt="Burmilla Longhair">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Burmilla Longhair</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://tica.org/images/Breeds/Chausie/Chausie-Full-Body.jpg" alt="Chausie">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Chausie</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://tica.org/images/Breeds/Cymric/Cymric-Full-Body.jpg" alt="Cymric">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Cymric</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://tica.org/images/Breeds/Donskoy/Donskoy-Full-Body.jpg" alt="Donskoy">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Donskoy</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://tica.org/images/Breeds/Havana/Havana-Full-Body.jpg" alt="Havana">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Havana</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://tica.org/images/Breeds/Himalayan/Himalayan-Full-Body.jpg" alt="Himalayan">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Himalayan</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://tica.org/images/Breeds/Japanese_Bobtail/Japanese-Bobtail-Full-Body.jpg" alt="Japanese Bobtail">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Japanese Bobtail</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://tica.org/images/Breeds/Japanese_Bobtail_Longhair/Japanese-Bobtail-Longhair-Full-Body.jpg" alt="Japanese Bobtail Longhair">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Japanese Bobtail Longhair</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://tica.org/images/Breeds/Kurilian_Bobtail/Kurilian-Bobtail-Full-Body.jpg" alt="Kurilian Bobtail">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Kurilian Bobtail</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://tica.org/images/Breeds/Kurilian_Bobtail_Longhair/Kurilian-Bobtail-Longhair-Full-Body.jpg" alt="Kurilian Bobtail Longhair">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Kurilian Bobtail Longhair</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://tica.org/images/Breeds/Maine_Coon/Maine-Coon-Full-Body.jpg" alt="Maine Coon">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Maine Coon</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://tica.org/images/Breeds/Maine_Coon_Polydactyl/Maine-Coon-Polydactyl-Full-Body.jpg" alt="Maine Coon Polydactyl">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Maine Coon Polydactyl</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://tica.org/images/Breeds/Savannah/Savannah-Full-Body.jpg" alt="Savannah">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Savannah</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://tica.org/images/Breeds/Scottish_Straight/Scottish-Straight-Full-Body.jpg" alt="Scottish Straight">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Scottish Straight</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://tica.org/images/Breeds/Scottish_Straight_Longhair/Scottish-Straight-Longhair-Full-Body.jpg" alt="Scottish Straight Longhair">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Scottish Straight Longhair</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://tica.org/images/Breeds/Snowshoe/Snowshoe-Full-Body.jpg" alt="Snowshoe">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Snowshoe</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pict">
+                                            <img src="https://www.rnz.co.nz/assets/news_crops/60229/eight_col_42643306_l.jpg?1530228981" alt="Two Cats">
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">See More...</a></p>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="searchbar-wrapper">
+                    <div class="search">
+                        <div class="heading">
+                            <h3>So, what is your cat's breeds?</h3>
+                        </div>
+                        <div class="searchbar">
+                            <input class="input-word" type="text" placeholder="Persian">
+                            <button class="search btn" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-lists">
+                <div class="part">
+                    <div class="opening">
+                        <h3>About Us</h3>
+                    </div>
+                    <div class="desc">
+                        <p>Ini cuma contoh, buat latihan apakah gue sudah ngerti dan mampu atau belum untuk terjun di dunia software engineering. </p>
+                    </div>
+                </div>
+                <div class="part">
+                    <div class="opening">
+                        <h3>Subscribe</h3>
+                    </div>
+                    <div class="desc subscription">
+                        <input type="email" placeholder="Email Address...">
+                        <button class="scb" type="submit">Subscribe</button>
+                    </div>
+                    <div class="socmed">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="part">
+                    <div class="opening">
+                        <h3>Contact Information</h3>
+                    </div>
+                    <div class="desc">
+                        <p>Villa Bekasi Indah I Blok I1 No. 19</p>
+                        <p>+62 8561473787</p>
+                        <p><a href="#" class="email">wintichasari@gmail.com</a></p>
+                    </div>
+                </div>
+                <div class="part">
+                    <div class="opening">
+                        <h3>Work Hours</h3>
+                    </div>
+                    <div class="desc">
+                        <p>Mon - Fri : 9AM - 3PM</p>
+                        <p>Sat : 9AM - 1PM</p>
+                        <p>Sun : Closed</p>
+                    </div>
+                </div>
+            </div>
+            <div class="copy">
+                <p>All Rights Reserved. &copy 2020 Go Cats! By: Winticha</p>
+            </div>
+        </footer>
+
+        <script src="/src/script/view/breed-tabs.js"></script>
+        <script src="/src/script/view/header.js"></script>
+    </body>
+
+</html>
